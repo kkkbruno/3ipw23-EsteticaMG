@@ -2,7 +2,7 @@
 body {
     background-color: #f5f5f5;
     font-family: 'Exo', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .content {
@@ -10,8 +10,7 @@ body {
     margin: 0 auto;
 }
 
-header img, 
-header nav {
+header img, header nav {
    float: left;
 }
 
@@ -42,4 +41,25 @@ a:hover {
 .hover:hover {
     transition: 0.3;
     opacity: 0.5;
+}
+
+.banner img{
+    width: 100%;
+    margin: 20px auto;
+}
+
+.texto{
+    width: 49%;
+    display: inline-block;
+    text-align: justify;
+}
+
+.sobre h2{
+    font-weight: 900;
+    text-align: center;
+}
+
+.sobre img{
+    width: 50%;
+    display: inline-block;
 }
