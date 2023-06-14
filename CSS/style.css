@@ -276,7 +276,6 @@ font-size: 200px;
 
 .servicoss{
     padding: 70px 0;
-    margin: 50px 0;
    }
    
    .servico{
@@ -301,4 +300,5 @@ font-size: 200px;
    .servicoss h2{
        font-size: 40px;
        margin-bottom: 20px;
+       background-color: aqua;
    }
