@@ -305,6 +305,17 @@ font-size: 200px;
 
    .div50{
     width: 50%;
-    float: left;
     text-align: center;
+   }
+
+   .contato .siga ul{
+    display: inline-flex;
+   }
+
+   .contato .siga h1{
+    display: inline-flex;
+   }
+
+   .maint{
+    float: right;
    }
