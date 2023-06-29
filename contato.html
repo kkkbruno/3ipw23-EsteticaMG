@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <style>
+        @keyframes blink {
+          0% { opacity: 1; }
+          50% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+        </style>
+         <style>
+            #map {
+              height: 400px;
+              width: 100%;
+            }
+            </style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,20 +70,54 @@
 <div class="siga">
     <h1> Siga-nos: </h1>
     <ul>
-        <li><a href=""> <i class="fa-brands fa-facebook fa-beat" style="color: #0056eb;"></i></a></li>
+        <li><a href="https://pt-br.facebook.com/"> <i class="fa-brands fa-facebook fa-beat" style="color: #0056eb;"></i></a></li>
         <li><a href="https://Instagram.com/brunobg129"><i class="fa-brands fa-instagram fa-beat" style="color: #ad00a8;"></i></a></li>
-        <li><a href=""><i class="fa-brands fa-twitter fa-beat" style="color: #52a5ff;"></i></a></li>
+        <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-beat" style="color: #52a5ff;"></i></a></li>
         <li><a href="https://wa.me/44998832114"><i class="fa-brands fa-whatsapp fa-beat" style="color: #00ff1e;"></i></a></li>   
     </ul>
 </div>
 </div>
 <div class="loc">
 <h1 style="font-weight: 900;">Como Chegar:</h1>
-<img src="img/Captura de tela_2023-03-29_20-52-55 1.png" alt="" style="
-    width: 500px; padding-left: 100px;">
+<div id="map"></div>
+
+<script>
+  function initMap() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showMap);
+    } else {
+      alert("Geolocalização não é suportada pelo seu navegador.");
+    }
+  }
+
+  function showMap(position) {
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+
+    var mapOptions = {
+      center: { lat: latitude, lng: longitude },
+      zoom: 10
+    };
+
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    var marker = new google.maps.Marker({
+      position: { lat: latitude, lng: longitude },
+      map: map,
+      title: "Minha Localização"
+    });
+  }
+</script>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=SUA_API_KEY&callback=initMap"></script>
 </div>
   </main>
 </p>
+<p>
+   <div class="fim"> <h1 class="blinking-text"> Obrigado Pela Preferência </h1></div>
+</p>
+<br>
   <footer>
     <div class="content" style="
     margin-left: 480px;">
